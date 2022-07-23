@@ -29,11 +29,15 @@ logAdmins(students);
 function filterByMark(students) {
     //ввести оценку через prompt
     //и вернуть из функции список тех, у кого в поле mark оценка >= чем введенная ранее
-    let gradeStudent = prompt('Введите оценку: ', 0);
+    let gradeStudent = 0;
     let listGrade = [];
-    
-    listGrade.push(students.filter((student) => student.mark >= gradeStudent));
+     
+    do {
+        gradeStudent = prompt('Введите оценку: ', 0);  
+        
+    } while (gradeStudent > 4.9);
 
+    listGrade.push(students.filter((student) => student.mark >= gradeStudent));
     console.log(listGrade);
     return listGrade;
    
