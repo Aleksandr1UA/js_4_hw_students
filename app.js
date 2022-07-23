@@ -13,13 +13,15 @@ console.log(students);
 
 function logAdmins(students) {
     //вернуть из функции список тех, у кого поле isAdmin: true
-    /*let logAdmins = [];
+
+    /* let logAdmins = [];
     logAdmins = students.filter(function(student) {
         return student.isAdmin === true;
-    });*/
+    }); */
+
     let logAdmins = students.filter((student) => student.isAdmin === true);
+
     console.log (logAdmins);
-    
     return logAdmins;
 } 
 logAdmins(students); 
